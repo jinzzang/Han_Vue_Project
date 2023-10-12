@@ -1,17 +1,15 @@
-const { defineConfig } = require('@vue/cli-service')
-module.exports = defineConfig({
-  transpileDependencies: true
-})
-const path = require("path");
 
 module.exports = {
+  outputDir: "../src/main/resources/static",
   devServer: {
-      proxy : 'http://localhost:8080'
+    port: 8082,
+    proxy: {
+      '/vue': {
+        target: 'http://localhost:8081',
+        changeOrigin: true
+      }
+    }
   },
-    indexPath:'../../templates/vue/index.html',
-    publicPath: '/vue',
-    outputDir: path.resolve(__dirname, "../../resources/static/vue"),
-
   css:{
     sourceMap: true,
     loaderOptions: {

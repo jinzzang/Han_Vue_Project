@@ -22,8 +22,7 @@ export default {
   },
   methods: {
     ...mapMutations({
-
-    clearTodo() {
+      clearTodo() {
         this.$emit("clear All")
       }
     }),

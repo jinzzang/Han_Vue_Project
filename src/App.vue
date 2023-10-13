@@ -109,8 +109,8 @@ export default {
       mounted() {
         this.sortTodoOldest()
   },
-  
-      CclearAllItem() {
+
+      ClearAllItem() {
           this.todoItems = []
           localStorage.clear()
   },

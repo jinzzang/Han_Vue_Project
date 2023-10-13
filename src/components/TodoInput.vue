@@ -44,7 +44,7 @@ export default {
         this.clearInput()
       }
     },
-    
+
     clearInput() {
       this.newTodoItem = "";
     }
